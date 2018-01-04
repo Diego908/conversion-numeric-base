@@ -30,10 +30,10 @@ int string_to_int_hex(char c){
 	return n + 10;
 }
 
-void convert_with_stack(int denominator, int stack_size, int base){
+void convert_with_stack(int denominator, int base){
 	Stack s;
-	
-	start_stack(&s, stack_size, sizeof(int));
+
+	start_stack(&s, 32, sizeof(int));
 	
 	int rest, n;
 	
@@ -62,7 +62,6 @@ void convert_with_stack(int denominator, int stack_size, int base){
 			printf("%d", n);	
 		}
 	}
-	printf("\n");
 	deallocate_stack(&s);
 }
 
@@ -85,7 +84,7 @@ int potentiation_conversion(char num[], int base, int exp){
 //This function convert a number in base 10 to any base
 int convert_to_dec(char num[], int base){
 	int result = 0, i;
-	int exp = strlen(num)-1;//Armazena o tamanho da string para usar como expoente na operação de conversão para decimal
+	int exp = strlen(num)-1;//Stores the size's string for use as expoent in the calcule
 	
 	//If is binary number
 	if(base == BIN){
@@ -113,10 +112,10 @@ int convert_to_oct(char num[], int base){
 	
 	if(base == DEC){
 		n = atoi(num);
-		printf("n:%d\n",n);
 	}	
 	
-	convert_with_stack(n, strlen(num), OCT);
+	printf("\nOCT: ");
+	convert_with_stack(n, OCT);
 	
 	return 0;
 }
@@ -131,10 +130,10 @@ int convert_to_bin(char num[], int base){
 	
 	if(base == DEC){
 		n = atoi(num);
-		printf("n:%d\n",n);
 	}	
 	
-	convert_with_stack(n, strlen(num), BIN);
+	printf("\nBIN: ");
+	convert_with_stack(n, BIN);
 	
 	return 0;
 }
@@ -148,10 +147,10 @@ int convert_to_hex(char num[], int base){
 	
 	if(base == DEC){
 		n = atoi(num);
-		printf("n:%d\n",n);
 	}	
 	
-	convert_with_stack(n, strlen(num), HEX);
+	printf("\nHEX: ");
+	convert_with_stack(n, HEX);
 	
 	return 0;
 }
