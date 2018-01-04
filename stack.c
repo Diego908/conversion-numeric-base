@@ -34,7 +34,7 @@ int pop(Stack *s, void *info){
 	free(s->data[s->top]);
 	s->top--;
 	
-	return 1; //Sucesso
+	return 1; //Sucess
 }
 void show_stack(Stack s, void(*show_info)(void*) ){
 	if(empty_stack(s))

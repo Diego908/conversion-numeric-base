@@ -1,3 +1,4 @@
+//HEADER
 #define ERROR_FULL_STACK -1
 #define ERROR_EMPTY_STACK -2
 

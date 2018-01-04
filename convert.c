@@ -86,17 +86,17 @@ int convert_to_dec(char num[], int base){
 	int result = 0, i;
 	int exp = strlen(num)-1;//Stores the size's string for use as expoent in the calcule
 	
-	//If is binary number
+	//If is a binary number
 	if(base == BIN){
 		result = potentiation_conversion(num, BIN, exp);
 		return result;
 	}
-	
+	//if is a oct number
 	if(base == OCT){
 		result = potentiation_conversion(num, OCT, exp);
 		return result;
 	}
-	
+	//if is is a hex number
 	if(base == HEX){
 		result = potentiation_conversion(num, HEX, exp);
 		return result;
