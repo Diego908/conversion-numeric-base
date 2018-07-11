@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
 	
 	
 	do{
-		printf("Choose a option:\n1-Type a bin number\n2-Type a oct number\n3-Type a dec number\n4-Type a hex number\n5-Sair\n\n");//Menu
+		printf("Choose a option:\n1-Type a bin number\n2-Type a oct number\n3-Type a dec number\n4-Type a hex number\n5-Exit\n\n");//Menu
 		scanf("%d", &op);
 		
 		system("cls");
